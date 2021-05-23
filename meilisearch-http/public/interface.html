@@ -251,7 +251,7 @@
         if (e.selectedIndex == -1) { return }
         var index = e.options[e.selectedIndex].value;
 
-        let theUrl = `${baseUrl}/indexes/${index}/search?q=${encodeURIComponent(search.value)}&attributesToHighlight=*`;
+        let theUrl = `${baseUrl}/indexes/${index}/search?limit=100&q=${encodeURIComponent(search.value)}&attributesToHighlight=*`;
 
         if (lastRequest) { lastRequest.abort() }
         lastRequest = new XMLHttpRequest();
